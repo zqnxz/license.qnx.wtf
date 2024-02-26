@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html class="loading dark-layout" lang="en" data-layout="dark-layout" data-textdirection="ltr">
+  <!-- BEGIN: Head-->
+
+  <%- include('../../partials/header-scripts.ejs') %>
+  <!-- END: Head-->
+
+  <!-- BEGIN: Body-->
+
+  <body
+    class="vertical-layout vertical-menu-modern navbar-floating footer-static"
+    data-open="click"
+    data-menu="vertical-menu-modern"
+    data-col=""
+  >
+    <!-- BEGIN: Header-->
+    <%- include('../../partials/header.ejs', {user: user}) %>
+    <!-- END: Header-->
+
+    <!-- BEGIN: Main Menu-->
+    <%- include('../../partials/sidebar.ejs', {user: user}) %>
+    <!-- END: Main Menu-->
+
+    <!-- BEGIN: Content-->
+    <div class="app-content content">
+      <div class="content-overlay"></div>
+      <div class="header-navbar-shadow"></div>
+      <div class="content-wrapper">
+        <div class="content-header row">
+          <div class="content-header-right text-md-right col-md-3 col-12 d-md-block d-none"></div>
+        </div>
+        <%- body %>
+      </div>
+    </div>
+    <!-- END: Content-->
+
+    <div class="sidenav-overlay"></div>
+    <div class="drag-target"></div>
+
+    <!-- BEGIN: Footer-->
+    <%- include('../../partials/footer.ejs') %>
+    <button class="btn btn-primary btn-icon scroll-top" type="button">
+      <i data-feather="arrow-up"></i>
+    </button>
+    <!-- END: Footer-->
+
+    <!-- BEGIN: Vendor JS-->
+    <%- include('../../partials/footer-scripts.ejs') %>
+    <!-- END: Theme JS-->
+
+    <!-- BEGIN: Page JS-->
+    <!-- END: Page JS-->
+  </body>
+  <!-- END: Body-->
+</html>

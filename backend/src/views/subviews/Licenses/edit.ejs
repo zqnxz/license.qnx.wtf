@@ -1,0 +1,63 @@
+<section id="basic-horizontal-layouts">
+    <div class="row">
+<div class="col-md-6 col-12">
+    <div class="card">
+        <div class="card-header">
+            <h4 class="card-title">Edit your License</h4>
+        </div>
+        <div class="card-body">
+            <!-- <form class="form form-horizontal"> -->
+                <form class="form" action="/editdone/<%= product.id %>" method="POST"> 
+                <div class="row">
+                    <div class="col-12">
+                        <div class="form-group row">
+                            <div class="col-sm-3 col-form-label">
+                                <label for="first-name">Resource</label>
+                            </div>
+                            <div class="col-sm-9">
+                                <input type="text" id="first-name" class="form-control" name="resource" value="<%= product.resource %>" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="form-group row">
+                            <div class="col-sm-3 col-form-label">
+                                <label for="email-id">IP</label>
+                            </div>
+                            <div class="col-sm-9">
+                                <input type="text" id="first-name" class="form-control" name="ip" value="<%= product.ip %>" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="form-group row">
+                            <div class="col-sm-3 col-form-label">
+                                <label for="contact-info">Webhook</label>
+                            </div>
+                            <div class="col-sm-9">
+                                <input type="text" id="first-name" class="form-control" name="webhook" value="<%= product.webhook %>" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="form-group row">
+                            <div class="col-sm-3 col-form-label">
+                                <label for="password">Code</label>
+                            </div>
+                            <div class="col-sm-9">
+                                <textarea name="code" class="form-control" id="validationBioBootstrap" rows="3"><%= product.code %></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-9 offset-sm-3 d-flex">
+                        <button type="submit" class="btn btn-primary mr-1">Submit</button>
+                        <button type="reset" class="btn btn-outline-secondary">Reset</button>
+                        </div>
+                    </div> 
+                </form>
+            <!-- </form> -->
+        </div>
+    </div> 
+</div>
+</div>
+</section>

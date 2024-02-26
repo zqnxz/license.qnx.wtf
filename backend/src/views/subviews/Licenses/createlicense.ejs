@@ -1,0 +1,60 @@
+<section class="bs-validation">
+  <div class="row">    
+    <!-- Bootstrap Validation -->
+    <div class="col-md-6 col-12">
+      <div class="card">
+          <div class="card-header">
+              <h4 class="card-title">Create License</h4>
+          </div>
+          <div class="card-body"> 
+              <form class="" method="POST" action="/createlicense/submit" novalidate>
+                  <div class="form-group">  
+                      <label class="form-label" for="basic-addon-name">Resource Name <span class="text-danger">*</span></label>
+
+                      <input name="resource" type="text" id="basic-addon-name" class="form-control" placeholder="ex: qnx-auth" aria-label="Name" aria-describedby="basic-addon-name" required />
+                      <div class="valid-feedback">Looks good!</div>
+                      <div class="invalid-feedback">Please enter your Resource Name.</div>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="basic-addon-name">IP Address <span class="text-danger">*</span></label>
+
+                    <input name="ip" type="text" id="basic-addon-name" class="form-control" placeholder="ex: 127.0.0.1" aria-label="Name" aria-describedby="basic-addon-name" required />
+                    <div class="valid-feedback">Looks good!</div>
+                    <div class="invalid-feedback">Please enter your IP Address.</div>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="basic-addon-name">Webhook <span class="text-danger">*</span></label>
+
+                    <input name="webhook" type="text" id="basic-addon-name" class="form-control" placeholder="" aria-label="Name" aria-describedby="basic-addon-name" required />
+                    <div class="valid-feedback">Looks good!</div>
+                    <div class="invalid-feedback">Please enter your Webhook.</div>
+                  </div>
+                  <div class="form-group"> 
+                    <label class="d-block" for="validationBioBootstrap">Server Code</label>
+                    <textarea name="code" class="form-control" id="validationBioBootstrap" name="validationBioBootstrap" rows="3"></textarea>
+                  </div>
+                  <div class="form-group">  
+                      <label for="dob-bootstrap-val">Ending Date <span class="text-danger">*</span></label>
+                      <input name="ending" type="text" class="form-control flatpickr-validation flatpickr" id="dob-bootstrap-val" required />
+                      <div class="valid-feedback">Looks good!</div>
+                      <div class="invalid-feedback">Please Enter Your Ending Date</div>
+                  </div>
+                  <div class="form-group">
+                      <div class="custom-control custom-checkbox">
+                          <input type="checkbox" class="custom-control-input" id="validationCheckBootstrap" required />
+                          <label class="custom-control-label" for="validationCheckBootstrap">Agree to our terms and conditions</label>
+                          <div class="invalid-feedback">You must agree before submitting.</div>
+                      </div>
+                  </div>
+                  <div class="row">
+                      <div class="col-12">
+                          <button type="submit" class="btn btn-primary">Submit</button>
+                      </div> 
+                  </div> 
+              </form>
+          </div>
+      </div>
+  </div>
+  </div>
+</section>
+  <!-- /Bootstrap Validation -->
