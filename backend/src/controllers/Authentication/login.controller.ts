@@ -5,17 +5,17 @@ export default {
   get: async (req: any, res: any) => {
     let authClient = new OAuthClient(
       process.env.auth_clid!,
-      process.env.auth_secret!
-    );
+      process.env.auth_secret! 
+    ); 
 
     authClient.setScopes(["identify", "email"]);
     authClient.setRedirect(process.env.redirect!);
 
     try {
       let code = req.query.code;
-      if (code === undefined) return res.redirect("/login");
+      if (code === undefined) return res.redirect("/login"); 
 
-      let userKey = await authClient.getAccess(code);
+      let userKey = await authClient.getAccess(code); 
       let User = await authClient.getUser(userKey);
 
       req.session.key = userKey;

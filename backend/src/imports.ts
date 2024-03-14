@@ -21,7 +21,7 @@ const imports = (app: Express) => {
   app.use(
     session({ 
       secret: 'secret',  
-      resave: false,
+      resave: false, 
       saveUninitialized: true, 
     })
   );
