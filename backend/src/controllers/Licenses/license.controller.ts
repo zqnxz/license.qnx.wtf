@@ -10,8 +10,6 @@ export default {
   
   submit: async (req: any, res: any) => {
     const { resource, ip, webhook, code, ending } = req.body;
-    console.log("CALLED")
-    console.log(resource, ip, webhook, code, ending);  
 
     if (!resource || !ip || !webhook || !ending) return res.redirect("/createlicense");
 
@@ -20,7 +18,6 @@ export default {
     ]).then((rows: any[]) => rows || []);  
  
     const selfObfuscations = userStatistics.filter((obfCount: any) => obfCount.obfuscations >= process.env.OBFUSCATIONS_MEMBER_MAX!);
-    console.log(selfObfuscations); 
 
     if (userStatistics[0].status === "Member" && selfObfuscations.length > 0) {
       return res.redirect("/"); 

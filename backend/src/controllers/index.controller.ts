@@ -24,13 +24,9 @@ export default {
     // const {code} = req.params
     const {id, code} = req.body
     const apiKey = process.env.ZEROSEC_API_KEY!;   
-    const zeroSec = new ZeroSec(apiKey);
-    console.log("CODE", code)    
+    const zeroSec = new ZeroSec(apiKey);  
 
     const isCodeAvailable = await query("SELECT * FROM licenses WHERE id = ? AND author = ?", [id, req.user.username]).then((rows: any[]) => rows[0] || false)
-
-    console.log("AVALABLE?", isCodeAvailable)  
- 
     if(!isCodeAvailable) return res.send("why exploit?")    
     
     const payload: ObfuscationPayload = {   
@@ -415,13 +411,11 @@ export default {
   },
   delete: async (req: any, res: any) => {
     const {id} = req.params
-    console.log("ID", id) 
 
     await query("DELETE FROM licenses WHERE id = ? AND author = ?", [
       id,
       req.user.username
     ]).then(() => {
-      console.log("DELETED LICENSE")
       res.redirect("/") 
     });
   },
@@ -432,7 +426,6 @@ export default {
     await query("UPDATE licenses SET resource = ?, ip = ?, webhook = ?, code = ? WHERE id = ? AND author = ?", [
       resource, ip, webhook, code, id, req.user.username
     ]).then(() => { 
-      console.log("UPDATED LICENSE")
       res.redirect("/")
     });
   } 

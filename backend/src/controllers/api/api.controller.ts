@@ -866,8 +866,7 @@ export default {
           }
         ]   
         );              
-      } else {          
-        console.log("NOT UATHED")             
+      } else {                  
         res.status(404).send("Unauthorized");            
       }           
   },   
