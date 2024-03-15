@@ -2,6 +2,7 @@ import express, { Express, Request, Response } from "express";
 const app: Express = express();
 import imports from "./imports";
 import loginMiddleware from "./middlewares/Authentication/login.middleware";
+import httpExceptionMiddleware from "./middlewares/exceptions/http.middleware"
 
 imports(app); 
 
@@ -19,11 +20,6 @@ routes.forEach((route) => {
 /**
  * @task catch non existing endpoints 
  */
-app.use((req: Request, res: Response) => {
-  res.status(404).send("NO SERVER CODE"); 
-  // res.render("subviews/endpoint", { 
-  //   layout: "./pages/error/endpoint",
-  // });
-});
+app.use(httpExceptionMiddleware); 
 
 app.listen(9991, () => console.log("Server running"));

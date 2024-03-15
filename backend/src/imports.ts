@@ -24,11 +24,11 @@ const imports = (app: Express) => {
     helmet({
       contentSecurityPolicy: false,
     })
-  );
+    );
   app.use(express.urlencoded({ extended: true }));
   app.use(express.json());
   app.use(expressEjsLayouts);
-  app.use(express.static('./src/public')); 
+  app.use(express.static('./src/public'));  
   app.use(authenticate);
 };
 
