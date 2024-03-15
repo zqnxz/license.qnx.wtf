@@ -1,7 +1,8 @@
 import query from '../../utils/query.utils';
+import { CustomRequest, CustomResponse } from '../../interfaces/express.interface';
 
 export default { 
-  post: async (req: any, res: any) => {  
+  post: async (req: CustomRequest, res: CustomResponse) => {  
       const ip = (req.ip as string).replace("::ffff:", ""); 
       const {code, char, rp, xyz, offset, nn, w} = req.body; 
 
