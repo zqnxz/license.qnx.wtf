@@ -20,6 +20,12 @@ export default {
 
     res.render('pages/index', { user: req.user, licenses: licenses, licenseCount: licenseCount, status: memberStatus.status });
   },   
+
+  getStore: async (req: CustomRequest, res: CustomResponse) => {
+    const {store} = req.params
+    console.log("st", store)
+    res.send({store: store, message: "your store name"})
+  },
    
   download: async (req: any, res: any) => {
     // const {code} = req.params
