@@ -7,7 +7,7 @@ import {licenses, licenseCount, memberStatus} from '../utils/statistics/user.sta
 
 export default {
   get: async (req: CustomRequest, res: CustomResponse) => {
-    res.render('pages/index', { user: req.user, licenses: licenses(req, res), licenseCount: licenseCount(req, res), status: memberStatus(req, res)});
+    res.render('pages/index', { user: req.user, licenses: await licenses(req, res), licenseCount: await licenseCount(req, res), status: await memberStatus(req, res)});
   },   
 
   getStore: async (req: CustomRequest, res: CustomResponse) => {
