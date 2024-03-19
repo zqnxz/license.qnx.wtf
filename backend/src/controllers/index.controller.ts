@@ -3,22 +3,11 @@
 import query from '../utils/query.utils';
 import ZeroSec, { ObfuscationPayload, ObfuscationResult } from 'zerosec'; 
 import { CustomRequest, CustomResponse } from '../interfaces/express.interface';
+import {licenses, licenseCount, memberStatus} from '../utils/statistics/user.statistics';
 
 export default {
   get: async (req: CustomRequest, res: CustomResponse) => {
-    const licenses = await query("SELECT * FROM licenses WHERE author = ?", [
-      req.user.username
-    ]).then((rows: any[]) => rows || [])  
-
-    const licenseCount = await query("SELECT * FROM licenses WHERE author = ?", [
-      req.user.username
-    ]).then((rows: any[]) => rows.length || 0)
-
-    const memberStatus = await query("SELECT * FROM users WHERE username = ?", [
-      req.user.username
-    ]).then((rows: any[]) => rows[0] || "Member")
-
-    res.render('pages/index', { user: req.user, licenses: licenses, licenseCount: licenseCount, status: memberStatus.status });
+    res.render('pages/index', { user: req.user, licenses: licenses(req, res), licenseCount: licenseCount(req, res), status: memberStatus(req, res)});
   },   
    
   download: async (req: any, res: any) => {
