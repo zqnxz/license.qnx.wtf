@@ -21,3 +21,13 @@ CREATE TABLE users (
     isBlacklisted int NOT NULL DEFAULT 0,
     PRIMARY KEY(id)  
 ); 
+
+CREATE TABLE stores (
+    id INT NOT NULL AUTO_INCREMENT,  
+    owner CHAR(35) NOT NULL,
+    discord_id VARCHAR(50) DEFAULT NULL,
+    name CHAR(35) NOT NULL,
+    domain CHAR(50) NOT NULL,
+    created_at CHAR(25) NOT NULL, 
+    PRIMARY KEY(id)  
+)

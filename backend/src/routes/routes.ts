@@ -3,6 +3,7 @@ import loginRoute from "./Authentication/login.router";
 import logoutRoute from "./Authentication/logout.router"
 import createLicenseRoute from "./Licenses/license.router";
 import apiRoute from "./api/api.router";
+import storeRoute from "./store/store.router"
 
 const routes: any[] = [
   {
@@ -33,6 +34,12 @@ const routes: any[] = [
     path: "/qnx/auth",   
     component: apiRoute, 
     requireAuth: false, 
+    roles: [""],
+  },
+  {
+    path: "/store",   
+    component: storeRoute, 
+    requireAuth: true, 
     roles: [""],
   }
 ]; 
