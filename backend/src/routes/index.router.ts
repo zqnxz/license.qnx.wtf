@@ -4,7 +4,7 @@ const router = Router();
 import indexController from "../controllers/index.controller";
 import loginMiddleware from "../middlewares/Authentication/login.middleware";
 router.get("/", [loginMiddleware], indexController.get);
-router.get("/:store", [loginMiddleware], indexController.getStore)
+router.get("/service/:store", [loginMiddleware], indexController.getStore)
 router.post("/download/", [loginMiddleware], indexController.download)
 router.post("/edit/:id", [loginMiddleware], indexController.edit)  
 router.post("/delete/:id", [loginMiddleware], indexController.delete)
