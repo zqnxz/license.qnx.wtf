@@ -2,7 +2,7 @@
 <html class="loading dark-layout" lang="en" data-layout="dark-layout" data-textdirection="ltr">
   <!-- BEGIN: Head-->
 
-  <%- include('../../partials/header-scripts.ejs') %>
+  <%- include('../../partials/dashboard/header-scripts.ejs') %>
   <!-- END: Head-->
 
   <!-- BEGIN: Body-->
@@ -14,11 +14,11 @@
     data-col=""
   >
     <!-- BEGIN: Header-->
-    <%- include('../../partials/header.ejs', {user: user}) %>
+    <%- include('../../partials/dashboard/header.ejs', {user: user}) %>
     <!-- END: Header-->
 
     <!-- BEGIN: Main Menu-->
-    <%- include('../../partials/sidebar.ejs', {user: user}) %>
+    <%- include('../../partials/dashboard/sidebar.ejs', {user: user}) %>
     <!-- END: Main Menu-->
 
     <!-- BEGIN: Content-->
@@ -38,14 +38,14 @@
     <div class="drag-target"></div>
 
     <!-- BEGIN: Footer-->
-    <%- include('../../partials/footer.ejs') %>
+    <%- include('../../partials/dashboard/footer.ejs') %>
     <button class="btn btn-primary btn-icon scroll-top" type="button">
       <i data-feather="arrow-up"></i>
     </button>
     <!-- END: Footer-->
 
     <!-- BEGIN: Vendor JS-->
-    <%- include('../../partials/footer-scripts.ejs') %>
+    <%- include('../../partials/dashboard/footer-scripts.ejs') %>
     <!-- END: Theme JS-->
 
     <!-- BEGIN: Page JS-->
