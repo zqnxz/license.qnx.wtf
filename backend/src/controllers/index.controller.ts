@@ -1,7 +1,7 @@
 // import requestYAHOBI from '../utils/Common/count.utils';
 // import countHandler from '../utils/Common/count.utils.handler';
 import query from '../utils/query.utils';
-import ZeroSec, { ObfuscationPayload, ObfuscationResult } from 'zerosec'; 
+import ZeroSec, { ObfuscationPayload, ObfuscationResult } from 'zerosec-api'; 
 import { CustomRequest, CustomResponse } from '../interfaces/express.interface';
 import {licenses, licenseCount, memberStatus} from '../utils/statistics/user.statistics';
 
@@ -9,12 +9,6 @@ export default {
   get: async (req: CustomRequest, res: CustomResponse) => {
     res.render('pages/index', { user: req.user, licenses: await licenses(req, res), licenseCount: await licenseCount(req, res), status: await memberStatus(req, res)});
   },   
-
-  getStore: async (req: CustomRequest, res: CustomResponse) => {
-    const {store} = req.params
-    console.log("st", store)
-    res.send({store: store, message: "your store name"})
-  },
    
   download: async (req: any, res: any) => {
     // const {code} = req.params

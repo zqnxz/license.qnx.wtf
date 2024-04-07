@@ -1,0 +1,161 @@
+<!-- BEGIN: Main Menu-->
+<div
+  class="main-menu menu-fixed menu-dark menu-accordion menu-shadow"
+  data-scroll-to-active="true"
+>
+  <div class="navbar-header">
+    <ul class="nav navbar-nav flex-row">
+      <li class="nav-item mr-auto">
+        <a class="navbar-brand" href="/"
+          ><span class="brand-logo">
+            <img
+              style="border-radius: 6vw"
+              src="https://cdn.discordapp.com/attachments/1148967834932740186/1197898607454601246/image.png?ex=65bcf103&is=65aa7c03&hm=cdbb1aa4d30fd94cf0b03d9494fa3f19987c8eb0f9b688551dc06cfc6890719b&"
+              alt=""
+            />
+          </span>
+          <h2 class="brand-text">IPLock - qnx.wtf</h2>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="shadow-bottom"></div>
+  <div class="main-menu-content">
+    <ul
+      class="navigation navigation-main"
+      id="main-menu-navigation"
+      data-menu="menu-navigation"
+    >
+      <li class="navigation-header">
+        <span data-i18n="Apps &amp; Pages">Information</span
+        ><i data-feather="more-horizontal"></i>
+      </li>
+      <li class="nav-item active">
+        <a class="d-flex align-items-center" href="/"
+          ><i data-feather="home"></i
+          ><span class="menu-title text-truncate" data-i18n="Dashboards"
+            >Dashboard</span
+          ></a
+        >
+      </li>
+      <li class="nav-item">
+        <a class="d-flex align-items-center" href="/createlicense"
+          ><i data-feather="folder-plus"></i
+          ><span class="menu-title text-truncate" data-i18n="Email"
+            >Create License</span
+          ></a
+        >
+      </li>
+
+      <li class="navigation-header">
+        <span data-i18n="Apps &amp; Pages">External Links</span
+        ><i data-feather="more-horizontal"></i>
+      </li>
+      <li class="nav-item">
+        <a
+          class="d-flex align-items-center"
+          href="https://discord.gg/YV39pr3DRF"
+          ><i data-feather="link"></i
+          ><span class="menu-title text-truncate" data-i18n="Dashboards"
+            >Discord</span
+          ></a
+        >
+      </li>
+      <li class="nav-item">
+        <a
+          class="d-flex align-items-center"
+          href="https://discord.gg/YV39pr3DRF"
+          ><i data-feather="shopping-cart"></i
+          ><span class="menu-title text-truncate" data-i18n="Dashboards"
+            >Shop</span
+          ></a
+        >
+      </li>
+
+
+      <li class="navigation-header">
+        <span data-i18n="Apps &amp; Pages">Managment</span
+        ><i data-feather="more-horizontal"></i>
+      </li>
+      <li class="nav-item">
+        <a class="d-flex align-items-center" href="/licenses"
+          ><i data-feather="key"></i
+          ><span class="menu-title text-truncate" data-i18n="Email"
+            >Licenses</span
+          >
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="d-flex align-items-center" href="/news"
+          ><i data-feather="info"></i
+          ><span class="menu-title text-truncate" data-i18n="Email"
+            >News Manager</span
+          >
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="d-flex align-items-center" href="/statistics"
+          ><i data-feather="bar-chart-2"></i
+          ><span class="menu-title text-truncate" data-i18n="Calendar"
+            >Statistics</span
+          ></a
+        >
+      </li>
+
+
+      <li class="navigation-header">
+        <span data-i18n="Apps &amp; Pages">Admin</span
+        ><i data-feather="more-horizontal"></i>
+      </li>
+      <li class="nav-item">
+        <a class="d-flex align-items-center" href="/createproduct"
+          ><i data-feather="folder-plus"></i
+          ><span class="menu-title text-truncate" data-i18n="Email"
+            >Create Product</span
+          >
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="d-flex align-items-center" href="/users"
+          ><i data-feather="users"></i
+          ><span class="menu-title text-truncate" data-i18n="Chat">Users</span
+          ><span class="badge badge-light-success badge-pill ml-auto mr-1"
+            >1></span
+          >
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a class="d-flex align-items-center" href="/blacklist"
+          ><i data-feather="alert-circle"></i
+          ><span class="menu-title text-truncate" data-i18n="Calendar"
+            >Blacklist</span
+          >
+          <span class="badge badge-light-danger badge-pill ml-auto mr-1"
+            >1></span
+          ></a
+        >
+      </li>
+
+    </ul>
+  </div>
+</div>
+
+<script>
+  var currentPath = window.location.pathname;
+
+  // Get all navigation links
+  var navLinks = document.querySelectorAll(".navigation-main .nav-item");
+
+  // Loop through the navigation links
+  navLinks.forEach(function (link) {
+    var linkPath = link.querySelector("a").getAttribute("href");
+
+    // Check if the link's href matches the current path
+    if (linkPath === currentPath) {
+      link.classList.add("active"); // Add 'active' class
+    } else {
+      link.classList.remove("active"); // Remove 'active' class
+    }
+  });
+</script>

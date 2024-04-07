@@ -7,6 +7,17 @@ export default {
             layout: './pages/store/create-store'
         });  
     },
+    getStore: async (req: CustomRequest, res: CustomResponse) => {
+        const {store} = req.params
+    
+        const isStoreAvailable = await query("SELECT * FROM stores WHERE domain = ?", [store]).then((stores: any) => stores[0] || null)
+    
+        if(!isStoreAvailable) {
+          return res.send("Store not found")
+        }
+    
+        res.render('pages/store/index-store');
+    },
     create: async (req: CustomRequest, res: CustomResponse) => {
         const {name, domain} = req.body
         console.log(name, domain)

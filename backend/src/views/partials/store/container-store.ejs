@@ -1,0 +1,154 @@
+<!--/ Line Chart -->
+<div class="col-lg-16 col-16">
+  <!-- Medal Card -->
+  <div class="row">
+
+    <div class="col-12 col-md-6 col-lg-5">
+      <div class="card card-congratulation-medal">
+          <div class="card-body">
+              <h5>Do you need more licenses and features?</h5>
+              <p class="card-text font-small-3">Click the button below to upgrade</p>
+              <a href="https://discord.gg/YV39pr3DRF" class="btn btn-primary" target="_blank">Get Premium</a>
+              <!-- <button type="button" >Get Premium</button> -->
+              <img src="../../../../app-assets/images/illustration/badge.svg" class="congratulation-medal" alt="Medal Pic" />
+          </div>
+      </div>
+  </div>
+  <!--/ Medal Card -->
+  </div>
+
+  <!-- Statistics card section -->
+  <section id="statistics-card">
+    <!-- Line Chart Card -->
+    <div class="row">
+      <div class="col-lg-4 col-sm-6 col-12">
+          <div class="card">
+              <div class="card-header align-items-start pb-0">
+                  <div>
+                      <h2 class="font-weight-bolder">1</h2>
+                      <p class="card-text">Your Licenses</p> 
+                  </div>
+                  <div class="avatar bg-light-primary p-50">
+                      <div class="avatar-content">
+                          <i data-feather="folder" class="font-medium-5"></i>
+                      </div>
+                  </div>
+              </div>
+              <div id="line-area-chart-5"></div>
+          </div>
+      </div>
+      <div class="col-lg-4 col-sm-6 col-12">
+          <div class="card">
+              <div class="card-header align-items-start pb-0">
+                  <div>
+                      <h2 class="font-weight-bolder">200</h2>
+                      <p class="card-text">Global Authentications</p>
+                  </div>
+                  <div class="avatar bg-light-success p-50">
+                      <div class="avatar-content">
+                          <i data-feather="database" class="font-medium-5"></i>
+                      </div>
+                  </div>
+              </div>
+              <div id="line-area-chart-6"></div>
+          </div>
+      </div>
+      <div class="col-lg-4 col-sm-6 col-12">
+          <div class="card">
+              <div class="card-header align-items-start pb-0">
+                  <div>
+                  
+      
+                   
+                        <h2 class="font-weight-bolder text-warning">abc</h2>
+              
+                      <p class="card-text">Membership Status</p>
+                  </div> 
+                  <div class="avatar bg-light-warning p-50">
+                      <div class="avatar-content">
+                          <i data-feather="shield" class="font-medium-5"></i>
+                      </div>
+                  </div>
+              </div>
+              <div id="line-area-chart-7"></div>
+          </div>
+      </div>
+  </div>
+  </section>
+  <!--/ Line Chart Card -->
+
+
+  <!-- Borderless table start -->
+  <div class="row" id="table-borderless">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-title">Your Licenses</h4>
+            </div>
+            <div class="card-body">
+                <p class="card-text">               
+                    Add <code>Licenses</code> on the left side "Create License" tab.
+                </p>
+            </div>
+            <div class="table-responsive">
+                <table class="table table-borderless">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Script</th>
+                            <th>Ending Date</th> 
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                      
+                        <tr>
+                            <td>
+                                <span class="font-weight-bold">1</span>
+                            </td>
+                            <td>aaaa</td>
+                            <td>
+                                <div class="avatar-group">
+                                    <span class="font-weight-bold">end</span>
+                                </div>
+                            </td>
+                            <td><span class="badge badge-pill badge-light-success mr-1">Active</span></td>
+                            <td>
+                                <div class="dropdown d-flex">
+                                    <form action="/download" method="POST">          
+                                        <input type="hidden" name="id" value="1">                          
+                                        <input type="hidden" name="code" value="aaaaa">                          
+                                        <button class="btn btn-success p-50 ">
+                                            Download
+                                        </button>
+                                    </form>
+                                    <button type="button" class="btn btn-sm dropdown-toggle hide-arrow" data-toggle="dropdown">
+                                        <i data-feather="more-vertical"></i>
+                                    </button>
+                                    <div class="dropdown-menu">
+                                        <form action="/edit/1" method="POST">
+                                            <button class="dropdown-item"> 
+                                                <i data-feather="edit-2" class="mr-50"></i>
+                                                <span>Edit</span>
+                                            </button> 
+                                        </form>   
+                                        <form action="/delete/1" method="POST">
+                                            <button class="dropdown-item"> 
+                                                <i data-feather="trash" class="mr-50"></i>
+                                                <span>Delete</span> 
+                                            </button>  
+                                        </form> 
+                                    </div>
+                                </div> 
+                            </td>
+                        </tr>
+          
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Borderless table end -->
+</div>

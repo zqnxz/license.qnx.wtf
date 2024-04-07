@@ -21,7 +21,8 @@
     "helmet": "^7.1.0",
     "mysql": "^2.18.1",
     "path": "^0.12.7",
-    "zerosec": "^1.0.6"
+    "zerosec": "^1.0.6",
+    "zerosec-api": "^1.0.6"
   },
   "devDependencies": {
     "@types/axios": "^0.14.0",

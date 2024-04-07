@@ -39,7 +39,7 @@ const routes: any[] = [
   {
     path: "/store",   
     component: storeRoute, 
-    requireAuth: true, 
+    requireAuth: false, 
     roles: [""],
   }
 ]; 
