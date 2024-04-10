@@ -16,7 +16,11 @@ export default {
     
       const isLicenseValid = await query("SELECT * FROM licenses WHERE ip = ?", [ 
         ip              
-      ]).then((rows: any[]) => rows || [])     
+      ]).then((rows: any[]) => rows || [])  
+      
+      if(isLicenseValid.length === 0) {
+        return res.status(404).send("No valid IP found");
+      }
   
       const isIpValid = isLicenseValid.filter((i: any): boolean => i.ip === ip) 
       const isExpired = isLicenseValid[0].ending < new Date().toISOString().split('T')[0]
